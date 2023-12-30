@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Internal Marks Calculator</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="alignn.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Internal Marks Calculator</h1>
+        <form id="scoreForm">
+            <div class="form-group">
+                <label for="testScore1">Test Score 1:</label>
+                <input type="number" id="testScore1" name="testScore1">
+                <label for="assignmentScore1">Assignment Score 1:</label>
+                <input type="number" id="assignmentScore1" name="assignmentScore1">
+            </div>
+
+            <div class="form-group">
+                <label for="testScore2">Test Score 2:</label>
+                <input type="number" id="testScore2" name="testScore2">
+                <label for="assignmentScore2">Assignment Score 2:</label>
+                <input type="number" id="assignmentScore2" name="assignmentScore2">
+            </div>
+
+            <div class="form-group">
+                <label for="testScore3">Test Score 3:</label>
+                <input type="number" id="testScore3" name="testScore3">
+                <label for="assignmentScore3">Assignment Score 3:</label>
+                <input type="number" id="assignmentScore3" name="assignmentScore3">
+            </div>
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        <div id="result"></div>
+        <div id="error" class="error-message"></div>
+    </div>
+
+    <div class="slider-container">
+        <label class="switch">
+            <input type="checkbox" id="themeToggle">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
+    <script src="new.js"></script>
+</body>
+</html>

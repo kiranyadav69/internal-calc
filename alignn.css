@@ -1,0 +1,194 @@
+
+/* Overall layout and container */
+.container {
+    background-color: #fffdce; /* Light yellow background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Adjust container width for responsiveness */
+    margin: 50px auto; /* Center the container horizontally and add margin from top */
+    padding: 20px;
+}
+
+
+
+
+/* Header */
+h1 {
+    font-family: Raleway, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    text-align: center; /* Center the header */
+    margin-bottom: 20px; /* Add space below the header */
+}
+
+/* Form elements */
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+label,
+input[type="number"] {
+    width: 48%; /* Adjust the width of form elements */
+    /* Add more specific styles based on your layout needs */
+}
+
+/* Buttons */
+button {
+    background-color: #0095c8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+/* Results display */
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Error message */
+#error {
+    color: red;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Dark mode toggle */
+.slider-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 999; /* Ensure it's above other elements */
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #333;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+    background-color: #0095c8; /* Moon icon for dark mode */
+}
+
+/* Dark mode changes */
+body.dark-theme {
+    background-color: #1e1e1e; /* Dark grey or black background */
+    color: #fff; /* White text */
+}
+
+.container {
+    background-color: #333; /* Darker container background */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Lighter shadow for contrast */
+}
+
+h1 {
+    color: #fff; /* White header text */
+}
+
+label {
+    color: #eee; /* Lighter labels */
+}
+
+input[type="number"] {
+    border-color: #666; /* Darker input borders */
+    background-color: #444; /* Slightly lighter input background */
+    color: #fff; /* White input text */
+}
+
+button {
+    background-color: #ffcc00; /* Yellow button in dark mode */
+    color: #703e3e; /* Dark text for button */
+}
+
+#result {
+    color: #ffcc00; /* Yellow text for result */
+}
+
+#error {
+    color: #ff6347; /* Red error text */
+}
+
+.slider {
+    background-color: #000000; /* Darker slider background */
+}
+
+.slider:before {
+    background-color: #666; /* Darker toggle ball */
+}
+
+input:checked + .slider {
+    background-color: #ffffff; /* Background color for checked toggle */
+}
+
+/* Add this to your existing CSS */
+
+
+/* Responsive adjustments */
+.container {
+    width: 80%; /* Adjust container width for responsiveness */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+label,
+input[type="number"] {
+    width: 45%; /* Adjust the width of form elements */
+    /* Add more specific styles based on your layout needs */
+}
+
+.slider-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 999; /* Ensure it's above other elements */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Adjust container width for smaller screens */
+    }
+
+    label,
+    input[type="number"] {
+        width: 100%; /* Full width for form elements on smaller screens */
+    }
+}
